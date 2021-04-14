@@ -372,6 +372,8 @@ HM_EXPORT_METHOD(popBack, __popBackWithCount:pageInfo:)
         // 本来就是 keyWindow，所以不需要 makeKeyAndVisible，也不需要 keyWindow.hidden = NO
     }
     // UINavigationController 显示 UINavigationController，实际上是模态显示，会被存放在 _childModalViewController
+    topViewController.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    topViewController.navigationController.interactivePopGestureRecognizer.delegate = nil;
     [topViewController showViewController:viewController sender:nil];
 }
 

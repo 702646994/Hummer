@@ -309,8 +309,8 @@ forCellWithReuseIdentifier:HMRecycleListViewListCellDefaultIdentifier];
 
 - (void)__setRefreshView:(HMBaseValue *)value {
     BOOL isVertical = HMScrollDirectionVertical == self.direction;
-    NSAssert(isVertical, @"Can't set refresh view when direction is not vertical");
     if (!isVertical) { return; }
+    NSAssert(isVertical, @"Can't set refresh view when direction is not vertical");
     
     UIView *subView = value.hm_toObjCObject;
     BOOL isValueKindOfView = [subView isKindOfClass:[UIView class]];
@@ -352,8 +352,8 @@ forCellWithReuseIdentifier:HMRecycleListViewListCellDefaultIdentifier];
 
 - (void)__setLoadMoreView:(HMBaseValue *)value {
     BOOL isVertical = HMScrollDirectionVertical == self.direction;
-    NSAssert(isVertical, @"Can't set load view when direction is not vertical");
     if (!isVertical) { return; }
+    NSAssert(isVertical, @"Can't set load view when direction is not vertical");
     
     UIView *subView = value.hm_toObjCObject;
     BOOL isValueKindOfView = [subView isKindOfClass:[UIView class]];
